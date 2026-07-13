@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./../styles/Home.css";
 import {
     FaUser,
@@ -10,7 +11,9 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {
+
     const [portal, setPortal] = useState("Citizen");
+    const navigate = useNavigate();
 
     return (
         <div className="home">
@@ -136,7 +139,24 @@ export default function Home() {
                         />
                     </div>
 
-                    <button className="login-btn">
+                    <button
+                        className="login-btn"
+                        onClick={() => {
+
+                            if (portal === "Citizen") {
+                                navigate("/citizen-dashboard");
+                            }
+
+                            else if (portal === "Officer") {
+                                navigate("/officer-dashboard");
+                            }
+
+                            else {
+                                navigate("/admin-dashboard");
+                            }
+
+                        }}
+                    >
                         Continue to {portal} Portal
                     </button>
 
