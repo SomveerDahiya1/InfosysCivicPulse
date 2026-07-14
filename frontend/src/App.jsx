@@ -1,35 +1,88 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
+
+import CitizenLayout from "./layouts/CitizenLayout";
+
 import CitizenDashboard from "./pages/CitizenDashboard";
+import SubmitComplaint from "./pages/SubmitComplaint";
+import TrackComplaint from "./pages/TrackComplaint";
+import Notifications from "./pages/Notifications";
+import Feedback from "./pages/Feedback";
+import Profile from "./pages/Profile";
+
 import OfficerDashboard from "./pages/OfficerDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
+import NotFound from "./pages/NotFound";
 
-                <Route path="/" element={<Home />} />
+function App() {
+
+    return (
+
+        <Routes>
+
+            <Route
+                path="/"
+                element={<Home />}
+            />
+
+            <Route
+                path="/citizen"
+                element={<CitizenLayout />}
+            >
 
                 <Route
-                    path="/citizen-dashboard"
+                    path="dashboard"
                     element={<CitizenDashboard />}
                 />
 
                 <Route
-                    path="/officer-dashboard"
-                    element={<OfficerDashboard />}
+                    path="submit"
+                    element={<SubmitComplaint />}
                 />
 
                 <Route
-                    path="/admin-dashboard"
-                    element={<AdminDashboard />}
+                    path="track"
+                    element={<TrackComplaint />}
                 />
 
-            </Routes>
-        </BrowserRouter>
+                <Route
+                    path="notifications"
+                    element={<Notifications />}
+                />
+
+                <Route
+                    path="feedback"
+                    element={<Feedback />}
+                />
+
+                <Route
+                    path="profile"
+                    element={<Profile />}
+                />
+
+            </Route>
+
+            <Route
+                path="/officer/dashboard"
+                element={<OfficerDashboard />}
+            />
+
+            <Route
+                path="/admin/dashboard"
+                element={<AdminDashboard />}
+            />
+
+            <Route
+                path="*"
+                element={<NotFound />}
+            />
+
+        </Routes>
+
     );
+
 }
 
 export default App;

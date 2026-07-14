@@ -144,15 +144,21 @@ export default function Home() {
                         onClick={() => {
 
                             if (portal === "Citizen") {
-                                navigate("/citizen-dashboard");
+
+                                navigate("/citizen/dashboard");
+
                             }
 
                             else if (portal === "Officer") {
-                                navigate("/officer-dashboard");
+
+                                navigate("/officer/dashboard");
+
                             }
 
                             else {
-                                navigate("/admin-dashboard");
+
+                                navigate("/admin/dashboard");
+
                             }
 
                         }}

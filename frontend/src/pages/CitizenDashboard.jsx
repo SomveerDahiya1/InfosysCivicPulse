@@ -1,67 +1,80 @@
 import "../styles/Dashboard.css";
+import Sidebar from "../components/Sidebar";
+import Topbar from "../components/Topbar";
+import DashboardCard from "../components/DashboardCard";
+import QuickActions from "../components/QuickActions";
+import {
+
+    FaClipboardList,
+    FaClock,
+    FaSpinner,
+    FaCheckCircle
+
+} from "react-icons/fa";
+import ComplaintTable from "../components/ComplaintTable";
 
 export default function CitizenDashboard() {
     return (
         <div className="dashboard">
 
-            {/* Sidebar */}
 
-            <aside className="sidebar">
-
-                <h2>🏛️ CivicPulse</h2>
-
-                <ul>
-                    <li className="active">📊 Dashboard</li>
-                    <li>📝 Submit Complaint</li>
-                    <li>📍 Track Complaint</li>
-                    <li>🔔 Notifications</li>
-                    <li>⭐ Feedback</li>
-                    <li>👤 My Profile</li>
-                    <li>🚪 Logout</li>
-                </ul>
-
-            </aside>
 
             {/* Main Content */}
 
             <main className="content">
 
-                <header className="topbar">
 
-                    <div>
-                        <h1>Citizen Dashboard</h1>
-                        <p>Welcome Back 👋</p>
-                    </div>
-
-                    <button>
-                        🌙 Dark Mode
-                    </button>
-
-                </header>
 
                 {/* Statistics */}
-
                 <div className="stats">
 
-                    <div className="stat-card">
-                        <h2>12</h2>
-                        <p>Total Complaints</p>
-                    </div>
+                    <DashboardCard
 
-                    <div className="stat-card">
-                        <h2>3</h2>
-                        <p>Pending</p>
-                    </div>
+                        title="Total Complaints"
 
-                    <div className="stat-card">
-                        <h2>5</h2>
-                        <p>In Progress</p>
-                    </div>
+                        count="12"
 
-                    <div className="stat-card">
-                        <h2>4</h2>
-                        <p>Resolved</p>
-                    </div>
+                        icon={<FaClipboardList />}
+
+                        color="#2563eb"
+
+                    />
+
+                    <DashboardCard
+
+                        title="Pending"
+
+                        count="3"
+
+                        icon={<FaClock />}
+
+                        color="#f59e0b"
+
+                    />
+
+                    <DashboardCard
+
+                        title="In Progress"
+
+                        count="5"
+
+                        icon={<FaSpinner />}
+
+                        color="#3b82f6"
+
+                    />
+
+                    <DashboardCard
+
+                        title="Resolved"
+
+                        count="4"
+
+                        icon={<FaCheckCircle />}
+
+                        color="#16a34a"
+
+                    />
 
                 </div>
 
@@ -82,86 +95,46 @@ export default function CitizenDashboard() {
 
                 {/* Complaint Table */}
 
-                <table>
+                <ComplaintTable />
+                <QuickActions />
+                <div className="bottom-section">
 
-                    <thead>
+                    <div className="profile-card">
 
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
+                        <h2>Citizen Profile</h2>
 
-                    </thead>
+                        <img
+                            src="https://i.pravatar.cc/120"
+                            alt="profile"
+                        />
 
-                    <tbody>
+                        <h3>Somveer Dahiya</h3>
 
-                    <tr>
+                        <p>Citizen ID : CP10245</p>
 
-                        <td>CP001</td>
+                        <p>📍 Gurgaon, Haryana</p>
 
-                        <td>Road Damage</td>
+                    </div>
 
-                        <td>Road</td>
+                    <div className="notification-card">
 
-                        <td>
-                                <span className="pending">
-                                    Pending
-                                </span>
-                        </td>
+                        <h2>Latest Updates</h2>
 
-                        <td>
-                            <button>View</button>
-                        </td>
+                        <ul>
 
-                    </tr>
+                            <li>✅ Road Complaint #CP001 Assigned</li>
 
-                    <tr>
+                            <li>🚰 Water Leakage Complaint Resolved</li>
 
-                        <td>CP002</td>
+                            <li>📢 Municipality issued new notice.</li>
 
-                        <td>Water Leakage</td>
+                            <li>⭐ Don't forget to submit feedback.</li>
 
-                        <td>Water</td>
+                        </ul>
 
-                        <td>
-                                <span className="resolved">
-                                    Resolved
-                                </span>
-                        </td>
+                    </div>
 
-                        <td>
-                            <button>View</button>
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>CP003</td>
-
-                        <td>Garbage Collection</td>
-
-                        <td>Sanitation</td>
-
-                        <td>
-                                <span className="progress">
-                                    In Progress
-                                </span>
-                        </td>
-
-                        <td>
-                            <button>View</button>
-                        </td>
-
-                    </tr>
-
-                    </tbody>
-
-                </table>
-
+                </div>
             </main>
 
         </div>
