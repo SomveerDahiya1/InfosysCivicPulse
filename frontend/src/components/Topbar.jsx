@@ -5,9 +5,13 @@ import {
     FaSearch
 } from "react-icons/fa";
 
+import { useNavigate } from "react-router-dom";
+
 import "../styles/Topbar.css";
 
 export default function Topbar() {
+
+    const navigate = useNavigate();
 
     return (
 
@@ -34,11 +38,19 @@ export default function Topbar() {
 
                 </div>
 
-                <button className="icon-btn">
+                {/* Notification Button */}
+
+                <button
+                    className="icon-btn"
+                    onClick={() => navigate("/citizen/notifications")}
+                    title="Notifications"
+                >
 
                     <FaBell />
 
                 </button>
+
+                {/* Dark Mode Button */}
 
                 <button className="icon-btn">
 
@@ -46,7 +58,14 @@ export default function Topbar() {
 
                 </button>
 
-                <div className="profile">
+                {/* Profile */}
+
+                <div
+                    className="profile"
+                    onClick={() => navigate("/citizen/profile")}
+                    style={{ cursor: "pointer" }}
+                    title="Profile"
+                >
 
                     <FaUserCircle />
 
