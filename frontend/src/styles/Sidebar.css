@@ -98,7 +98,17 @@
     transition:.3s;
 
 }
+.sidebar ul li a{
 
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    color:inherit;
+    text-decoration:none;
+
+    width:100%;
+}
 .sidebar li a{
     color:#1e293b;
     text-decoration:none;

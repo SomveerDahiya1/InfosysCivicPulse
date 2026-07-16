@@ -8,13 +8,14 @@ import {
     FaSignOutAlt
 } from "react-icons/fa";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import "../styles/Sidebar.css";
 
 export default function Sidebar() {
 
     const location = useLocation();
+    const navigate = useNavigate();
 
     return (
 
@@ -104,7 +105,11 @@ export default function Sidebar() {
 
             </ul>
 
-            <div className="logout">
+            <div
+                className="logout"
+                onClick={() => navigate("/")}
+                style={{ cursor: "pointer" }}
+            >
 
                 <FaSignOutAlt />
 
