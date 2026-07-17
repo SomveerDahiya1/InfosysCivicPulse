@@ -686,3 +686,56 @@
     margin-top:15px;
 
 }
+/* ===========================
+        Profile
+=========================== */
+
+.profile-card{
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+
+}
+
+.profile-header{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.profile-image{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #2563eb;
+
+}
+
+.profile-header h2{
+
+    margin-bottom:8px;
+
+}
+
+.profile-header p{
+
+    color:#64748b;
+    margin-bottom:15px;
+
+}
