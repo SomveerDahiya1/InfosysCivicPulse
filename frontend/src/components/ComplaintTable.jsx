@@ -1,7 +1,8 @@
 import "../styles/Table.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ComplaintTable() {
-
+    const navigate = useNavigate();
     return (
 
         <div className="table-card">
@@ -10,10 +11,11 @@ export default function ComplaintTable() {
 
                 <h2>Recent Complaints</h2>
 
-                <button className="view-all-btn">
-
+                <button
+                    className="view-all-btn"
+                    onClick={() => navigate("/citizen/track")}
+                >
                     View All
-
                 </button>
 
             </div>

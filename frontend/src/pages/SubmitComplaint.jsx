@@ -26,25 +26,7 @@ export default function SubmitComplaint() {
 
                 {/* Complaint Info */}
 
-                <div className="form-info">
-
-                    <div>
-
-                        <strong>Complaint ID</strong>
-
-                        <p>CP2026001</p>
-
-                    </div>
-
-                    <div>
-
-                        <strong>Date</strong>
-
-                        <p>09 Jul 2026</p>
-
-                    </div>
-
-                </div>
+               
 
                 <div className="form-card">
 

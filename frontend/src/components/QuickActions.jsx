@@ -3,11 +3,12 @@ import {
     FaSearchLocation,
     FaCommentDots
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/Dashboard.css";
 
 export default function QuickActions() {
-
+    const navigate = useNavigate();
     return (
 
         <div className="quick-actions">
@@ -20,7 +21,12 @@ export default function QuickActions() {
 
                 <p>Register a new civic issue.</p>
 
-                <button>Create</button>
+                <button
+
+                    onClick={() => navigate("/citizen/submit")}
+                >
+                    + Create
+                </button>
 
             </div>
 
@@ -32,7 +38,11 @@ export default function QuickActions() {
 
                 <p>Check complaint status.</p>
 
-                <button>Track</button>
+                <button
+                    onClick={() => navigate("/citizen/track")}
+                >
+                    Track Complaint
+                </button>
 
             </div>
 
@@ -44,7 +54,11 @@ export default function QuickActions() {
 
                 <p>Rate our services.</p>
 
-                <button>Give Feedback</button>
+                <button
+                    onClick={() => navigate("/citizen/feedback")}
+                >
+                    Give Feedback
+                </button>
 
             </div>
 

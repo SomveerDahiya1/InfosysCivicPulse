@@ -1,6 +1,7 @@
 import "../styles/Dashboard.css";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import { useNavigate } from "react-router-dom";
 import DashboardCard from "../components/DashboardCard";
 import QuickActions from "../components/QuickActions";
 import {
@@ -14,6 +15,7 @@ import {
 import ComplaintTable from "../components/ComplaintTable";
 
 export default function CitizenDashboard() {
+    const navigate = useNavigate();
     return (
         <div className="dashboard">
 
@@ -87,7 +89,10 @@ export default function CitizenDashboard() {
                         placeholder="Search Complaint..."
                     />
 
-                    <button className="new-btn">
+                    <button
+                        className="new-btn"
+                        onClick={() => navigate("/citizen/submit")}
+                    >
                         + New Complaint
                     </button>
 
@@ -99,22 +104,6 @@ export default function CitizenDashboard() {
                 <QuickActions />
                 <div className="bottom-section">
 
-                    <div className="profile-card">
-
-                        <h2>Citizen Profile</h2>
-
-                        <img
-                            src="https://i.pravatar.cc/120"
-                            alt="profile"
-                        />
-
-                        <h3>Somveer Dahiya</h3>
-
-                        <p>Citizen ID : CP10245</p>
-
-                        <p>📍 Gurgaon, Haryana</p>
-
-                    </div>
 
                     <div className="notification-card">
 

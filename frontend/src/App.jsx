@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
+import ScrollToTop from "./components/ScrolltoTop";
 import Home from "./pages/Home";
 
 import CitizenLayout from "./layouts/CitizenLayout";
@@ -19,7 +19,8 @@ import NotFound from "./pages/NotFound";
 function App() {
 
     return (
-
+        <>
+            <ScrollToTop />
         <Routes>
 
             <Route
@@ -80,7 +81,7 @@ function App() {
             />
 
         </Routes>
-
+        </>
     );
 
 }
