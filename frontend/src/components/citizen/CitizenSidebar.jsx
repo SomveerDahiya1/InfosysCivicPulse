@@ -10,9 +10,9 @@ import {
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import "../styles/Sidebar.css";
+import "../../styles/common/Sidebar.css";
 
-export default function Sidebar() {
+export default function CitizenSidebar() {
 
     const location = useLocation();
     const navigate = useNavigate();

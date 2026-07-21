@@ -1,7 +1,9 @@
 import { Outlet } from "react-router-dom";
 
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import CitizenSidebar from "../components/citizen/CitizenSidebar.jsx";
+import CitizenTopbar from "../components/citizen/CitizenTopbar.jsx";
+
+
 
 export default function CitizenLayout() {
 
@@ -9,11 +11,11 @@ export default function CitizenLayout() {
 
         <div className="dashboard">
 
-            <Sidebar />
+            <CitizenSidebar />
 
             <main className="content">
 
-                <Topbar />
+                <CitizenTopbar/>
 
                 <Outlet />
 

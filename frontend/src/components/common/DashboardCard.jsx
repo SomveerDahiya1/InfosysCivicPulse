@@ -1,4 +1,4 @@
-import "../styles/Dashboard.css";
+import "../../styles/common/Dashboard.css";
 
 export default function DashboardCard({
 

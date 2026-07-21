@@ -1,9 +1,9 @@
-import "../styles/Dashboard.css";
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import "../../styles/common/Dashboard.css";
+import CitizenSidebar from "../../components/citizen/CitizenSidebar.jsx";
+import CitizenTopbar from "../../components/citizen/CitizenTopbar.jsx";
 import { useNavigate } from "react-router-dom";
-import DashboardCard from "../components/DashboardCard";
-import QuickActions from "../components/QuickActions";
+import DashboardCard from "../../components/common/DashboardCard.jsx";
+import QuickActions from "../../components/common/QuickActions.jsx";
 import {
 
     FaClipboardList,
@@ -12,13 +12,12 @@ import {
     FaCheckCircle
 
 } from "react-icons/fa";
-import ComplaintTable from "../components/ComplaintTable";
+import ComplaintTable from "../../components/common/ComplaintTable.jsx";
 
 export default function CitizenDashboard() {
     const navigate = useNavigate();
     return (
         <div className="dashboard">
-
 
 
             {/* Main Content */}

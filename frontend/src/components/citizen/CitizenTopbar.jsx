@@ -7,9 +7,9 @@ import {
 
 import { useNavigate } from "react-router-dom";
 
-import "../styles/Topbar.css";
+import "../../styles/common/Topbar.css";
 
-export default function Topbar() {
+export default function CitizenTopbar() {
 
     const navigate = useNavigate();
 

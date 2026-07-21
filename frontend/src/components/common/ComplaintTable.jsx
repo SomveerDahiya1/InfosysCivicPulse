@@ -1,4 +1,4 @@
-import "../styles/Table.css";
+import "../../styles/common/Table.css";
 import { useNavigate } from "react-router-dom";
 
 export default function ComplaintTable() {

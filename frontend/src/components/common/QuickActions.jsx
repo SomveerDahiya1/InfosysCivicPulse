@@ -5,7 +5,7 @@ import {
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-import "../styles/Dashboard.css";
+import "../../styles/common/Dashboard.css";
 
 export default function QuickActions() {
     const navigate = useNavigate();
