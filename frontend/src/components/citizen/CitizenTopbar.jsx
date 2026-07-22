@@ -43,7 +43,7 @@ export default function CitizenTopbar() {
                 <button
                     className="icon-btn"
                     onClick={() => navigate("/citizen/notifications")}
-                    title="Notifications"
+                    title="OfficerNotifications"
                 >
 
                     <FaBell />
@@ -58,13 +58,13 @@ export default function CitizenTopbar() {
 
                 </button>
 
-                {/* Profile */}
+                {/* OfficerProfile */}
 
                 <div
                     className="profile"
                     onClick={() => navigate("/citizen/profile")}
                     style={{ cursor: "pointer" }}
-                    title="Profile"
+                    title="OfficerProfile"
                 >
 
                     <FaUserCircle />

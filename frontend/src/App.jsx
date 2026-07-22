@@ -2,16 +2,24 @@ import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/common/ScrolltoTop.jsx";
 import Home from "./pages/Home";
 
-import CitizenLayout from "./layouts/CitizenLayout";
+import OfficerLayout from "./layouts/OfficerLayout";
 
+import OfficerDashboard from "./pages/officer/OfficerDashboard";
+import AssignedComplaints from "./pages/officer/AssignedComplaints";
+import ComplaintDetails from "./pages/officer/ComplaintDetails";
+import UpdateComplaint from "./pages/officer/UpdateComplaint";
+import OfficerNotifications from "./pages/officer/OfficerNotifications.jsx";
+import OfficerProfile from "./pages/officer/OfficerProfile.jsx";
+
+import CitizenLayout from "./layouts/CitizenLayout";
 import CitizenDashboard from "./pages/citizen/CitizenDashboard.jsx";
 import SubmitComplaint from "./pages/citizen/SubmitComplaint.jsx";
 import TrackComplaint from "./pages/citizen/TrackComplaint.jsx";
-import Notifications from "./pages/citizen/Notifications.jsx";
-import Feedback from "./pages/citizen/Feedback.jsx";
-import Profile from "./pages/citizen/Profile.jsx";
+import CitizenNotifications from "./pages/citizen/CitizenNotifications.jsx";
+import CitizenFeedback from "./pages/citizen/CitizenFeedback.jsx";
+import CitizenProfile from "./pages/citizen/CitizenProfile.jsx";
 
-import OfficerDashboard from "./pages/officer/OfficerDashboard.jsx";
+
 import AdminDashboard from "./pages/admin/AdminDashboard.jsx";
 
 import NotFound from "./pages/NotFound";
@@ -22,6 +30,55 @@ function App() {
         <>
             <ScrollToTop />
         <Routes>
+            <Route
+                path="/officer"
+                element={<OfficerLayout />}
+            >
+
+                <Route
+                    path="dashboard"
+                    element={<OfficerDashboard />}
+                />
+
+                <Route
+                    path="assigned"
+                    element={<AssignedComplaints />}
+                />
+
+            </Route>
+            <Route path="/officer" element={<OfficerLayout />}>
+
+                <Route
+                    path="dashboard"
+                    element={<OfficerDashboard />}
+                />
+
+                <Route
+                    path="assigned"
+                    element={<AssignedComplaints />}
+                />
+
+                <Route
+                    path="details"
+                    element={<ComplaintDetails />}
+                />
+
+                <Route
+                    path="update"
+                    element={<UpdateComplaint />}
+                />
+
+                <Route
+                    path="notifications"
+                    element={<OfficerNotifications />}
+                />
+
+                <Route
+                    path="profile"
+                    element={<OfficerProfile />}
+                />
+
+            </Route>
 
             <Route
                 path="/"
@@ -50,17 +107,17 @@ function App() {
 
                 <Route
                     path="notifications"
-                    element={<Notifications />}
+                    element={<CitizenNotifications />}
                 />
 
                 <Route
                     path="feedback"
-                    element={<Feedback />}
+                    element={<CitizenFeedback />}
                 />
 
                 <Route
                     path="profile"
-                    element={<Profile />}
+                    element={<CitizenProfile />}
                 />
 
             </Route>

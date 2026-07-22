@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../styles/Forms.css";
+import "../../styles/common/Forms.css";
 
 export default function SubmitComplaint() {
 

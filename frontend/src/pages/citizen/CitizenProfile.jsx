@@ -1,6 +1,6 @@
-import "../../styles/Forms.css";
+import "../../styles/common/Forms.css";
 
-export default function Profile() {
+export default function OfficerProfile() {
 
     return (
 
@@ -8,7 +8,7 @@ export default function Profile() {
 
             <div className="form-container">
 
-                <h1>My Profile</h1>
+                <h1>My OfficerProfile</h1>
 
                 <p className="subtitle">
                     Manage your personal information.
@@ -20,7 +20,7 @@ export default function Profile() {
 
                         <img
                             src="https://i.pravatar.cc/150?img=12"
-                            alt="Profile"
+                            alt="OfficerProfile"
                             className="profile-image"
                         />
 

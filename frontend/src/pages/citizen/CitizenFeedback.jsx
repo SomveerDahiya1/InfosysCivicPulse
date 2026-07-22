@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "../../styles/Forms.css";
+import "../../styles/common/Forms.css";
 
-export default function Feedback() {
+export default function CitizenFeedback() {
 
     const [rating, setRating] = useState(0);
     const [experience, setExperience] = useState("");
@@ -112,7 +112,7 @@ export default function Feedback() {
 
                     </div>
 
-                    {/* Feedback */}
+                    {/* CitizenFeedback */}
 
                     <div className="section-card">
 
