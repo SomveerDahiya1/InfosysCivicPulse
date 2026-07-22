@@ -66,17 +66,7 @@ export default function OfficerSidebar() {
 
                 </li>
 
-                <li className={location.pathname === "/officer/update" ? "active" : ""}>
 
-                    <Link to="/officer/update">
-
-                        <FaEdit />
-
-                        <span>Update Status</span>
-
-                    </Link>
-
-                </li>
 
                 <li className={location.pathname === "/officer/notifications" ? "active" : ""}>
 
