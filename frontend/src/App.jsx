@@ -29,6 +29,15 @@ import CitizenProfile from "./pages/citizen/CitizenProfile";
 /* ---------------- Admin ---------------- */
 
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import Analytics from "./pages/admin/Analytics.jsx";
+import ManageComplaints from "./pages/admin/ManageComplaints.jsx";
+import Reports from "./pages/admin/Reports.jsx";
+import ManageOfficers from "./pages/admin/ManageOfficers.jsx";
+import AdminLayout from "./layouts/AdminLayout.jsx";
+import AdminProfile from "./pages/admin/AdminProfile.jsx";
+import AdminNotifications from "./pages/admin/AdminNotifications.jsx";
+
+
 
 function App() {
 
@@ -123,9 +132,46 @@ function App() {
                 {/* Admin */}
 
                 <Route
-                    path="/admin/dashboard"
-                    element={<AdminDashboard />}
-                />
+                    path="/admin"
+                    element={<AdminLayout />}
+                >
+
+                    <Route
+                        path="dashboard"
+                        element={<AdminDashboard />}
+                    />
+
+                    <Route
+                        path="officers"
+                        element={<ManageOfficers />}
+                    />
+
+                    <Route
+                        path="complaints"
+                        element={<ManageComplaints />}
+                    />
+
+                    <Route
+                        path="analytics"
+                        element={<Analytics />}
+                    />
+
+                    <Route
+                        path="reports"
+                        element={<Reports />}
+                    />
+
+                    <Route
+                        path="notifications"
+                        element={<AdminNotifications />}
+                    />
+
+                    <Route
+                        path="profile"
+                        element={<AdminProfile />}
+                    />
+
+                </Route>
 
                 {/* 404 */}
 
